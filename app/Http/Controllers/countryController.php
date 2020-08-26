@@ -38,7 +38,12 @@ class countryController extends Controller
     	
     	$country->save();
 
-    	return back();
+    	//return back();
+    	return redirect('/');
+    }
+
+    public function edit(){
+    	return view('front.country.edit');
     }
 
     public function update(){
