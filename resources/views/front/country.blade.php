@@ -13,7 +13,8 @@
       <th scope="col">Capital</th>
       <th scope="col">Currence</th>
       <th scope="col">Population</th>
-      <th scope="col">Created time</th>
+      <th scope="col">Created</th>
+      <th scope="col">Update</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
@@ -26,6 +27,7 @@
       <td>{{$country->currence}}</td>
       <td>{{$country->population}}</td>
       <td>{{$country->created_at->diffForHumans()}}</td>
+      <td>{{$country->updated_at->format('d M-Y')}}</td>
       <td class="text-center"><a href="countries/{{$country->id}}/edit" class="btn btn-primary">Edit</a> || <a href="" class="btn btn-danger">Delete</a></td>
     </tr>
     @endforeach
