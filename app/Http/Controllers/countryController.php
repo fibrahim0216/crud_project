@@ -63,14 +63,15 @@ class countryController extends Controller
     	return redirect('/');
     }
 
-    public function details($id){
+    public function detail($id){
         //$country = Country::where('id', $id)->first();
         $country = Country::find($id);
-    	return view('front.country.details', compact('country'));
+    	return view('front.country.detail', compact('country'));
     }
 
-    public function edit(){
-    	return view('front.country.edit');
+    public function edit($id){
+        $country = Country::find($id);
+    	return view('front.country.edit', compact('country'));
     }
 
     public function update(){

@@ -18,7 +18,7 @@ Route::get('/','countryController@index')->name('country');
 Route::get('/countries','countryController@index')->name('country');
 Route::get('/countries/create','countryController@create')->name('create');
 Route::post('/countries/create','countryController@store')->name('store');
-Route::get('/countrie/{id}','countryController@details')->name('details');
+Route::get('/countries/{id}','countryController@detail')->name('detail');
 Route::get('/countries/{id}/edit','countryController@edit')->name('edit');
 //Route::get('/countrie/update','countryController@update')->name('update');
 //Route::get('/countrie/details','countryController@details')->name('details');

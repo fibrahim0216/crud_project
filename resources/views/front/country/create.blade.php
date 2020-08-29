@@ -1,7 +1,7 @@
 @extends('front.layout.master')
 @section('title','Countries List')
 @section('content')
-<h2>Country List</h2>
+<h2>Country Create</h2>
 <form action="" method="post">
   @csrf
   <div class="form-group">
