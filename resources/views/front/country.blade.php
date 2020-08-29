@@ -22,7 +22,7 @@
     @foreach($countries as $country)
     <tr class="text-center">
       <td>{{$country->id}}</td>
-      <td><a href="countries/{{$country->id}}/details">{{$country->name}}</a></td>
+      <td><a href="countries/{{$country->id}}"> {{$country->name}}</a></td>
       <td>{{$country->capital}}</td>
       <td>{{$country->currence}}</td>
       <td>{{$country->population}}</td>

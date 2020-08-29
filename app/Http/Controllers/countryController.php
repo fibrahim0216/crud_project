@@ -64,7 +64,9 @@ class countryController extends Controller
     }
 
     public function details($id){
-    	return view('front.country.details');
+        //$country = Country::where('id', $id)->first();
+        $country = Country::find($id);
+    	return view('front.country.details', compact('country'));
     }
 
     public function edit(){
