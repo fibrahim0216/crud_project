@@ -4,6 +4,8 @@
 <h2>Country Edit</h2>
 <form action="" method="post">
   @csrf
+  @method('patch')
+  
   <div class="form-group">
     <label for="exampleInputEmail1">Country</label>
     <input type="text" name="name" class="form-control" value="{{$country->name}}">

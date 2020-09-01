@@ -69,13 +69,51 @@ class countryController extends Controller
     	return view('front.country.detail', compact('country'));
     }
 
-    public function edit($id){
-        $country = Country::find($id);
+    public function edit(Country $country){//Route model binding
+       // $country = Country::find($id);
     	return view('front.country.edit', compact('country'));
     }
 
-    public function update(){
-    	return view('front.country.update');
+
+
+    public function update($id){
+        $country = Country::find($id);
+
+        $name = request('name');
+        $capital = request('capital');
+        $currence = request('currence');
+        $population = request('population');
+
+       /* $country->name = $name;
+        $country->capital = $capital;
+        $country->currence = $currence;
+        $country->population = $population;
+
+        $country->save();
+        or
+        */
+
+        $country->update([
+            'name' => $name,
+            'capital' => $capital,
+            'currence' => $currence,
+            'population' => $population
+
+        ]);
+
+    	return redirect('/countries');
+    }
+
+    public function destroy($id){
+        $country = Country::find($id);
+        
+        $name = request('name');
+        $capital = request('capital');
+        $currence = request('currence');
+        $population = request('population');
+
+        $country->delete();
+        return back();
     }
 
 }

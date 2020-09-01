@@ -28,9 +28,19 @@
       <td>{{$country->population}}</td>
       <td>{{$country->created_at->diffForHumans()}}</td>
       <td>{{$country->updated_at->format('d M-Y')}}</td>
-      <td class="text-center"><a href="countries/{{$country->id}}/edit" class="btn btn-primary">Edit</a> || <a href="" class="btn btn-danger">Delete</a></td>
+      <td class="text-center"><a href="countries/{{$country->id}}/edit" class="btn btn-primary">Edit</a> || 
+          <a href="countries/{{$country->id}}/delete" class="btn btn-danger">Delete</a>
+        </td>
     </tr>
     @endforeach
   </tbody>
 </table>
 @endsection
+
+     {{-- delete best option
+       <form action="" method="post">
+          @csrf
+          @method('delete')
+          <a href="countries/{{$country->id}}/delete" class="btn btn-sm btn-danger">Delete</a>
+        </form>
+        --}}
