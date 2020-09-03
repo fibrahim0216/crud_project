@@ -17,9 +17,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/','countryController@index')->name('country');
 Route::get('/countries','countryController@index')->name('country');
 Route::get('/countries/create','countryController@create')->name('create');
+Route::get('/countries/{id}','countryController@detail')->name('detail')->where(['id' => '[0-9]+']);
 Route::post('/countries/create','countryController@store')->name('store');
-Route::get('/countries/{id}','countryController@detail')->name('detail');
 //Route::get('/countries/{id}/edit','countryController@edit')->name('edit');
 Route::get('/countries/{country}/edit','countryController@edit')->name('edit');
 Route::patch('/countries/{id}/edit','countryController@update')->name('update');
 Route::get('/countries/{id}/delete','countryController@destroy')->name('delete');
+
+//Top to buttom
+
+//left to right

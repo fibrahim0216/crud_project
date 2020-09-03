@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 29, 2020 at 10:18 AM
+-- Generation Time: Sep 03, 2020 at 04:06 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.9
 
@@ -42,29 +42,12 @@ CREATE TABLE `countries` (
 --
 
 INSERT INTO `countries` (`id`, `name`, `capital`, `currence`, `population`, `created_at`, `updated_at`) VALUES
-(1, 'Bangladesh', 'Dhaka', 'BDT', '18000000', '2020-08-28 08:48:52', '2020-08-28 08:48:52'),
-(2, 'Pakisthan', 'Islamabad', 'Rupy', '13000000', '2020-08-28 08:49:08', '2020-08-28 08:49:08'),
-(3, 'Indea', 'Kolkata', 'Rupy', '1235000000', '2020-08-28 08:59:47', '2020-08-28 08:59:47'),
-(4, 'USA', 'Caliphone', 'usa', '1235000000', '2020-08-28 20:23:48', '2020-08-28 20:23:48');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `migrations`
---
-
-CREATE TABLE `migrations` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `batch` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `migrations`
---
-
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(1, '2020_08_25_171323_create_countries_table', 1);
+(5, 'Bangladesh', 'Dhaka', 'BDT', '18000000', '2020-08-31 19:42:23', '2020-08-31 19:42:23'),
+(8, 'Pakisthan', 'Islamabad', 'Rupy', '13000000', '2020-08-31 19:54:11', '2020-08-31 19:54:11'),
+(9, 'Indea', 'Kolkata', 'Rupy', '1135000000', '2020-08-31 19:54:33', '2020-09-02 20:04:52'),
+(10, 'Pakisthan', 'Islamabad', 'Rupy', '180000002222', '2020-09-02 18:33:11', '2020-09-02 19:54:58'),
+(11, 'USA', 'Caliphone', 'Rupy', '180000002222', '2020-09-02 18:33:27', '2020-09-02 18:33:27'),
+(12, 'Japan', 'Katmondu', 'Uro', '1920000', '2020-09-02 19:51:33', '2020-09-02 19:51:33');
 
 --
 -- Indexes for dumped tables
@@ -77,12 +60,6 @@ ALTER TABLE `countries`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `migrations`
---
-ALTER TABLE `migrations`
-  ADD PRIMARY KEY (`id`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -90,13 +67,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `countries`
 --
 ALTER TABLE `countries`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `migrations`
---
-ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
