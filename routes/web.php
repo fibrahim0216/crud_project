@@ -27,3 +27,4 @@ Route::get('/countries/{id}/delete','countryController@destroy')->name('delete')
 //Top to buttom
 
 //left to right
+//complete of crud_project of laravel
