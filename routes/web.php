@@ -28,3 +28,5 @@ Route::get('/countries/{id}/delete','countryController@destroy')->name('delete')
 
 //left to right
 //complete of crud_project of laravel
+
+Route::get('/persons','personController@index');
