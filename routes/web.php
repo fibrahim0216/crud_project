@@ -30,3 +30,5 @@ Route::get('/countries/{id}/delete','countryController@destroy')->name('delete')
 //complete of crud_project of laravel
 
 Route::get('/persons','personController@index');
+Route::get('/persons/create','personController@create')->name('person_create');
+Route::post('/persons/create','personController@store')->name('person_store');

@@ -18,11 +18,11 @@ class CreatePeopleTable extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('phone');
+            $table->unsignedBigInteger('country_id');
             $table->timestamps();
 
 
-            $table->unsignedBigInteger('country');
-            $table->foreign('country')
+            $table->foreign('country_id')
             ->references('id')
             ->on('countries')
             ->onDelete('cascade');           
