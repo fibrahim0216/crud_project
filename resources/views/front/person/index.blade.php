@@ -25,7 +25,7 @@
       <td>{{$person->name}}</td>
       <td>{{$person->email}}</td>
       <td>{{$person->phone}}</td>
-      <td>{{$person->country_id}}</td>
+      <td>{{$person->country->name}}</td>
       <td>{{$person->created_at->diffForHumans()}}</td>
       <td>{{$person->updated_at->format('d M-Y')}}</td>
       <td class="text-center"><a href="" class="btn btn-primary">Edit</a> || 

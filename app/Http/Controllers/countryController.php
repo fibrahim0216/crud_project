@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Country;
+use App\Person;
 
 class countryController extends Controller
 {
@@ -66,7 +67,9 @@ class countryController extends Controller
     public function detail($id){
         //$country = Country::where('id', $id)->first();
         $country = Country::find($id);
-    	return view('front.country.detail', compact('country'));
+        //$country_person = Person::where('id', $country->id)->get();
+    	//return view('front.country.detail', compact('country', 'country_person'));
+        return view('front.country.detail', compact('country'));
     }
 
     public function edit(Country $country){//Route model binding
