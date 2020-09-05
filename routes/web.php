@@ -32,3 +32,5 @@ Route::get('/countries/{id}/delete','countryController@destroy')->name('delete')
 Route::get('/persons','personController@index');
 Route::get('/persons/create','personController@create')->name('person_create');
 Route::post('/persons/create','personController@store')->name('person_store');
+
+//Complete of crud project of part of 11 complate
